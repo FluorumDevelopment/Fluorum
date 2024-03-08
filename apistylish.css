@@ -3,4 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Comfortaa', sans-serif;
+    background: url(img.png) no-repeat center / cover;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота экрана */
 }
