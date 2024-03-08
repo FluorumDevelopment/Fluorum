@@ -9,22 +9,6 @@ body {
     background: url(img.jpg) no-repeat center / cover;
 }
 
-.github_icon {
-    color: #fff;
-    position: absolute;
-    top: 55px;
-    left: 5px;
-    font-size: 26px;
-}
-
-.spotify_icon {
-    color: #fff;
-    position: absolute;
-    top: 55px;
-    left: 40px;
-    font-size: 26px;
-}
-
 .screen {
     backdrop-filter: blur(3px);
     width: 100%;
