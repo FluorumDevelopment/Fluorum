@@ -1,0 +1,25 @@
+User-agent: Yandex
+User-agent: perplexityai
+User-agent: perplexity
+User-agent: Google
+User-agent: Bard
+User-agent: BardAI
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: CCBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: AdsBot-Google
+User-agent: AdsBot-Google-Mobile
+User-agent: AdsBot-Google-Mobile-Apps
+User-agent: Cloudflare
+User-agent: *
+
+Disallow: /canyouevenseeme.mp3
+Disallow: /pumpedup.mp3
+Disallow: /maximumenergyoutput.mp3
+Disallow: /rampage.mp3
+Allow: /
+
+Host: https://fluorum.onrender.com
+Sitemap: https://fluorum.onrender.com/sitemap.xml
