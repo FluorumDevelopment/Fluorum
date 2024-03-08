@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Введите ник:</h1>
-    <form action="https://fluorum.onrender.com/createkey" method="post">
+    <form action="https://fluoxiaapi.onrender.com/createkey" method="post">
         <input type="text" name="nick" id="nick">
         <br>
         <input type="submit" value="Создать ключ">
@@ -22,7 +22,7 @@
             const nick = nickInput.value;
 
             const xhr = new XMLHttpRequest();
-            xhr.open('POST', 'https://fluorum.onrender.com/createkey');
+            xhr.open('POST', 'https://fluoxiaapi.onrender.com/createkey');
             xhr.setRequestHeader('Content-Type', 'application/json');
             xhr.onload = () => {
                 const response = JSON.parse(xhr.responseText);
