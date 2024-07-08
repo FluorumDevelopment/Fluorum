@@ -1,86 +1,111 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Comfortaa', sans-serif;
+html, body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+	height: 100%;
 }
 
 body {
-    background: url(img.jpg) no-repeat center / cover;
+	background: #ffffff;
+	color: white;
 }
 
-.screen {
-    backdrop-filter: blur(3px);
-    width: 100%;
-    height: 100vh;
-    position: relative;
+html, body, canvas {
+	touch-action-delay: none;
+	touch-action: none;
 }
 
-.frame {
-    width: 70%;
-    height: 40%;
-    position: absolute;
-    top: 40%;
-    left: 10%;
+canvas, .c3htmlwrap {
+	position: absolute;
 }
 
-.avatar {
-    float: left;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px
+.c3htmlwrap {
+	contain: strict;
 }
 
-.text {
-    position: absolute;
-    left: 44px;
+.c3overlay {
+	pointer-events: none;
 }
 
-.ironwill {
-    position: absolute;
-    top: 85px;
-    left: 1px;
+.c3htmlwrap > * {
+	pointer-events: auto;
 }
 
-.canyouevenseeme {
-    position: absolute;
-    top: 145px;
-    left: 1px;
+/* HACK - work around elements being selectable only in iOS WKWebView for some reason */
+html[ioswebview] .c3htmlwrap,
+html[ioswebview] canvas {
+	-webkit-user-select: none;
+	user-select: none;
 }
 
-.rampage {
-    position: absolute;
-    top: 205px;
-    left: 1px;
+html[ioswebview] .c3htmlwrap > * {
+	-webkit-user-select: auto;
+	user-select: auto;
 }
 
-.maximumenergyoutput {
-    position: absolute;
-    top: 265px;
-    left: 1px;
+#notSupportedWrap {
+	margin: 2em auto 1em auto;
+	width: 75%;
+	max-width: 45em;
+	border: 2px solid #aaa;
+	border-radius: 1em;
+	padding: 2em;
+	background-color: #f0f0f0;
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	color: black;
 }
 
-.pressme {
-    position: absolute;
-    top: 330px;
-    left: 1px;
+#notSupportedTitle {
+	font-size: 1.8em;
 }
 
-h1 {
-    color: #fff;
+.notSupportedMessage {
+	font-size: 1.2em;
 }
 
-.tsb {
-    color: #fff;
-    position: absolute;
-    left: 1px;
-    top: 35px;
+.notSupportedMessage em {
+	color: #888;
 }
 
-.text2 {
-    color: #fff;
+/* bbcode styles */
+.bbCodeH1 {
+	font-size: 2em;
+	font-weight: bold;
 }
 
-.1488 {
-    font-size: 100px;
+.bbCodeH2 {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.bbCodeH3 {
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.bbCodeH4 {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.bbCodeItem::before {
+	content: " • ";
+}
+
+/* For text icons converted to HTML: size the height to the line height
+   preserving the aspect ratio. Also add position: relative as that allows
+   just adding a 'top' style for the iconoffsety style. */
+.c3-text-icon {
+	height: 1em;
+	width: auto;
+	position: relative;
+}
+
+/* screen reader text */
+.c3-screen-reader-text {
+	position: absolute;
+	width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
 }
